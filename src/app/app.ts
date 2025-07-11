@@ -4,7 +4,7 @@ import {NamePickerComponent} from './name-picker/name-picker.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, NamePickerComponent],
+  imports: [NamePickerComponent],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })

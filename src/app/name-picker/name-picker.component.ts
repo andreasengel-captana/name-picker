@@ -1,13 +1,14 @@
 import { Component } from '@angular/core';
 import {FormsModule} from '@angular/forms';
 
+
 @Component({
   selector: 'app-name-picker',
   templateUrl: './name-picker.component.html',
   imports: [
-    FormsModule
+    FormsModule,
   ],
-  styleUrls: ['./name-picker.component.css']
+  styleUrls: ['./name-picker.component.css'],
 })
 export class NamePickerComponent {
   names: string[] = [];

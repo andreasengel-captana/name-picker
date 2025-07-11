@@ -7,19 +7,27 @@
       rows="4"
       cols="30"
     ></textarea>
-    <button (click)="addNames()">add</button>
   </div>
-  <div class="names-list">
+
+  <div class="names-list" style="min-height: 400px">
     <h4>List of Names:</h4>
     <ul>
       @for (name of names; track name) {
         <li>{{ name }}</li>
       }
+
+      @if (names.length === 0) {
+        <li>-</li>
+      }
     </ul>
   </div>
-  <button (click)="pickRandomName()" [disabled]="names.length === 0">
-    Pick
-  </button>
+
+  <div class="button-section">
+    <button (click)="addNames()">Add Names</button>
+    <button (click)="pickRandomName()" [disabled]="names.length === 0">
+      Pick
+    </button>
+  </div>
 
   @if (pickedName) {
     <div class="result">
