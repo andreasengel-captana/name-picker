@@ -1,0 +1,29 @@
+<div class="container">
+  <h2>Random Name Picker</h2>
+  <div class="input-section">
+    <textarea
+      [(ngModel)]="inputNames"
+      placeholder="Enter names, newline or comma separated"
+      rows="4"
+      cols="30"
+    ></textarea>
+    <button (click)="addNames()">add</button>
+  </div>
+  <div class="names-list">
+    <h4>List of Names:</h4>
+    <ul>
+      @for (name of names; track name) {
+        <li>{{ name }}</li>
+      }
+    </ul>
+  </div>
+  <button (click)="pickRandomName()" [disabled]="names.length === 0">
+    Pick
+  </button>
+
+  @if (pickedName) {
+    <div class="result">
+      <h3>Next: {{ pickedName }}</h3>
+    </div>
+  }
+</div>

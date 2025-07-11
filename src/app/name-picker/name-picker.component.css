@@ -1,0 +1,21 @@
+.container {
+  max-width: 400px;
+  margin: 30px auto;
+  padding: 20px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  background: #fafafa;
+}
+.input-section {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+.names-list {
+  margin: 16px 0;
+}
+.result {
+  margin-top: 20px;
+  color: green;
+  font-weight: bold;
+}
